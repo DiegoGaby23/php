@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+<title>Tableau de bord</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />  
+<link rel="stylesheet" href="../css/normalize.css"> 
+<link href="../css/admin.css" rel="stylesheet" type="text/css" />
+<link href="../css/dashicons.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+	<aside id="zone_gauche">
+		<a id="logo" href="../index.php">
+			<img src="../images/logo.png" alt="retour au site" />
+		</a>
+		<nav id="menu_gauche">
+			<ul>
+				<li>
+					<a href="admin.php?action=compte">Comptes</a>
+				</li>
+				<li>
+					<a href="admin.php?action=produit&cas=ajouter">Produits</a>
+				</li>	
+				
+				<li>
+					<a href="admin.php?action=contact">Liste de contacts</a>
+				</li>
+
+			</ul>
+		</nav>
+	</aside>
+	<section id="zone_droite">
+		<header>
+			<h1><?php if(isset($titre)) {echo $titre;}?> </h1>
+			<div id="deconnexion">
+				<a href="admin.php?action=deconnecter">Se déconnecter</a>
+			</div>
+		</header>	
+		<?php  if(isset($contenu)) {include($contenu);}   ?>
+		<?php if(isset($liste)) {echo $liste;}?>
+	</section>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<form enctype="multipart/form-data" action="admin.php?action=produit&cas=<?php if(isset($action_form)){echo $action_form;}?>" method="POST">
+	
+	<label for="nom_produit">Nom du produit *</label>
+	<input id="nom_produit" type="text" name="nom_produit" value="<?php if(isset($_POST['nom_produit'])){echo $_POST['nom_produit'];} ?>">
+	
+	<label for="description_produit">Description du produit</label>
+	<textarea id="description_produit" name="description_produit"><?php if(isset($_POST["description_produit"])) {echo $_POST["description_produit"];} ?></textarea>
+	
+	<label for="prix_produit">Prix produit *</label>
+	<input id="prix_produit" type="text" name="prix_produit" value="<?php if(isset($_POST['prix_produit'])){echo $_POST['prix_produit'];} ?>">
+	
+	<label for="photo_produit">Photo du produit *</label>
+	<input id="photo_produit" type="file" name="photo_produit" value="">
+	<?php if(isset($message)){echo $message;} ?>
+	
+<div id="bouton">
+	<input  type="submit" name="submit" value="ENREGISTRER">
+	<input type="reset" name="reset" value="ANNULER">
+</div>
+
+
+
+</form>
+
+
+
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+<title>Snowboard Corporation</title>
+<!--charset=utf-8 permet de gérer les caractères accuentués-->
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />   
+<link href="../css/front.css" rel="stylesheet" type="text/css" />
+<link href="../css/dashicons.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<header>
+		<!--on rend le logo cliquable pour revenir en page d'accueil-->
+		<a href="../index.php">
+			<img id="logo" src="../images/logo.png" alt="Snowboard Corporation : snowbike, snowboard, ski" />
+		</a>
+		
+		<?php if(isset($menu_haut)){echo $menu_haut;} ?>
+
+		<div id="panier">
+			<a href="#">
+				<img src="../images/loupe.png" alt="Recherche ton snowboard" />
+			</a>
+			<a href="#">
+				<img src="../images/boutique.png" alt="Boutique Snowboard Corporation" />
+			</a>
+			<a href="#">
+				<img src="../images/espace_prive.png" alt="Espace privé de Snowboard Corp." />
+			</a>
+		</div>
+	</header>
+
+
+	<?php if(isset($_SESSION['retour_bo'])) {echo $_SESSION['retour_bo'];}  ?>
+	
+	<div class="fermer<?php if(isset($fermer)){echo $fermer;} ?>">
+		<a href="<?php if(isset($fermer)) {echo $fermer;}  ?>">
+			<span class="dashicons dashicons-no-alt"></span>
+		</a>
+	</div>
+	
+	<?php if(isset($contenu)){include $contenu;} ?>
+
+	
+</body>
+</html>

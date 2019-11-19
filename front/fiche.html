@@ -1,0 +1,24 @@
+<section id="produits" class="placement">	
+	<h1><?php if(isset($nom_produit)) {echo $nom_produit;}  ?></h1>
+	<p>Cette planche Illusion 2 de Nitro est une planche polyvalente freeride pour débutants à débrouillés. Son cambre classique et son twin directionnel en facilitent la manoeuvrabilité et la tolérance.</p>
+
+	<article>
+		<!-- <img src="../images/produit1.jpg" alt="Snowboard + Fix Nitro Lectra" /> -->
+		
+		<figure>
+		<?php if(isset($photo_produit)) {echo $photo_produit;}  ?>
+		</figure>
+
+		<div>
+		<?php if(isset($description_produit)) {echo $description_produit;}  ?>
+		<?php if(isset($prix_produit)) {echo $prix_produit;}  ?>
+		</div>
+
+	</article>
+	<div class="call_to_action">
+		<a>AJOUTER AU PANIER</a>
+	</div>
+	
+</section>	
+
+

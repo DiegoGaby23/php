@@ -1,0 +1,224 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*on fait un reset pour éliminer les espacements intrinseques produits par certaines balises*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*permet de retirer les bordures mises en automatique par le
+navigateur lors d'un clic*/
+
+a, input, textarea {
+	outline: none;
+}
+
+body {
+	font-family: arial, sans-serif;
+	font-size: 1em;
+	/*permet de ramener la taille par défaut de la police à 10px : en gros 1em=10px*/
+	overflow: hidden;
+	/*permet de supprimer les barres de défilements*/
+}
+
+#zone_gauche {
+	width: 300px;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background: #d4d4d4;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 0 1%;
+}
+
+#logo {
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	z-index: auto;
+}
+
+#menu_gauche {
+	width: 100%;
+}
+
+#menu_gauche ul {
+	list-style-type: none;
+}
+
+#menu_gauche li {
+	margin: 4px 0;
+}
+
+#menu_gauche a {
+	display: block;
+	padding: 15px 30px;
+	background: #f2f2f2;
+	color: #000;
+	text-decoration: none;
+}
+
+#menu_gauche a:hover:after {
+	content: "";
+}
+
+#menu_gauche a:hover {
+	background: #c2c2c2;
+	color: #fff;
+}
+
+#zone_droite {
+	position: absolute;
+	top: 0;
+	left: 17%;
+	width: calc(100% - 300px);
+	height: 100vh;
+	overflow: auto;
+}
+
+#zone_droite header {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 5%;
+	align-items: center;
+	padding: 20px 25%;
+}
+
+#zone_droite form {
+	width: 80%;
+	margin: auto;
+}
+
+#zone_droite form label, #zone_droite form input, #zone_droite textarea {
+	display: block;
+	padding: 5px 10px;
+	width: 100%;
+}
+
+#zone_droite form input, #zone_droite textarea {
+	border: 1px solid #d5d5d5;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+#zone_droite form input[type=submit], #zone_droite form input[type=reset] {
+	width: auto;
+	margin: 40px auto 0;
+	background-color: #c2c2c2;
+	color: #fff;
+}
+
+#zone_droite form textarea {
+	min-height: 200px;
+	min-width: 100%;
+	max-width: 100%;
+}
+
+#zone_droite #bouton {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+}
+
+#warning {
+	color: orange;
+}
+
+#liste {
+	border: ipx solid #d3d3d3;
+	border-collapse: collapse;
+	width: 80%;
+	font-size: 0.85em;
+	margin: 40px auto 10px;
+}
+
+#liste td, th {
+	border: 1px solid #d3d3d3;
+	padding: 5px;
+	text-align: left;
+}
+
+#liste tr td:last-child {
+	width: 150px;
+	text-align: center;
+}
+
+#liste th {
+	background-color: #e8e8e8;
+}
+
+#liste img {
+	height: 50px;
+	display: block;
+	margin: auto;
+}
+
+#liste img:hover {
+	transform: scale(4);
+	transition: 0.35s all ease;
+}
+
+/***************************************************************************/
+/****************************By PEREZ MOTA Javier***************************/
+/***************************************************************************/
+
+#confirme {
+	position: relative;
+	top: 50px;
+	left: 50px;
+}
+
+#confirme:hover:before {
+	content: "";
+	border: 10px solid black;
+	border-radius: 100px;
+	width: 50px;
+	height: 50px;
+	top: -15px;
+	position: absolute;
+	-webkit-animation: scale 1s infinite;
+	/* Chrome, Safari, Opera  */
+	animation: scale 1s infinite;
+}
+
+/* Chrome, Safari, Opera */
+
+@-webkit-keyframes scale {
+	0% {
+		border: 5px solid black;
+		opacity: 1;
+		left: -5px;
+	}
+	100% {
+		border: 1px solid black;
+		opacity: 0;
+		left: 0px
+	}
+}
+
+/* Standard syntax */
+
+@keyframes scale {
+	0% {
+		border: 1px solid black;
+		padding: 5px;
+		opacity: 1;
+	}
+	100% {
+		border: 10px solid black;
+		padding: 50px;
+		opacity: 0;
+	}
+}
+
+h1 span {
+	text-transform: uppercase;
+}
